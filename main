@@ -45,12 +45,13 @@ function Library:AddWindow(options)
     -----------------------------
 
     local ScreenGui = Instance.new("ScreenGui")
+    ScreenGui = Instance.new("ScreenGui")
     ScreenGui.Parent = CoreGui
     ScreenGui.Name = options.name
 
     local Container1 = Instance.new("Frame")
     Container1.Parent = ScreenGui
-    Container1.Size = UDim2.new(0, 550, 0, 480)
+    Container1.Size = UDim2.new(0, 550, 0, 600)
     Container1.AnchorPoint = Vector2.new("0.5","0.5")
     Container1.Position = UDim2.new(0.5, -100, 0.5, 0)
     Container1.BorderSizePixel = 0
@@ -123,7 +124,7 @@ function Library:AddWindow(options)
 
     local UIGradient2 = Instance.new("UIGradient")
     UIGradient2.Color = ColorSequence.new{
-        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(27, 30, 40)), -- 24, 27, 34
+        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(27, 30, 40)),
         ColorSequenceKeypoint.new(0.07, Color3.fromRGB(14, 17, 24)),
         ColorSequenceKeypoint.new(1.00, Color3.fromRGB(14, 17, 24))
     }
@@ -166,8 +167,7 @@ function Library:AddWindow(options)
 	TabLayout.SortOrder = Enum.SortOrder.LayoutOrder
 	TabLayout.Name = "TabLayout"
 
-    ----------------------------- Functions
-
+    ----------------------------- Elements -----------------------------
     function menu:AddTab(options)
         options = Library:validate({
             name = "Example"
@@ -198,8 +198,8 @@ function Library:AddWindow(options)
         local UIGradient3 = Instance.new("UIGradient")
         UIGradient3.Color = ColorSequence.new{
             ColorSequenceKeypoint.new(0.00, Color3.fromRGB(56, 149, 238)),
-            ColorSequenceKeypoint.new(0.6, Color3.fromRGB(17, 20, 27)),
-            ColorSequenceKeypoint.new(1.00, Color3.fromRGB(17, 20, 27)),
+            ColorSequenceKeypoint.new(0.8, Color3.fromRGB(36, 39, 49)),
+            ColorSequenceKeypoint.new(1.00, Color3.fromRGB(36, 39, 49)),
         }
     
         UIGradient3.Rotation = 90 -- Verticle Gradient
@@ -1016,6 +1016,12 @@ function Library:AddWindow(options)
 
         return tab
     end -- AddTab
+
+
+
+    -----------------------------
+        ---- Watermark  -----
+    -----------------------------
 
     -- Destroy menu
 	UIS.InputBegan:Connect(function(input)
