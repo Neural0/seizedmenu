@@ -1,0 +1,78 @@
+local main = Library:AddWindow({
+    name = "seized.one"
+})
+
+-- Aimbot
+
+local Aimbot_Tab = main:AddTab({
+    name = "Aimbot"
+})
+
+local Linear_Section = Aimbot_Tab:AddSection({
+    name = "Linear"
+})
+
+local example_button = Linear_Section:AddButton({
+    name = "Example Buttonnnnnnnnn",
+    callback = function()
+        print("Buttttonnnn")
+    end
+})
+
+local example_button2 = Linear_Section:AddButton({
+    name = "Example Button",
+    callback = function()
+        print("Pressed")
+    end
+})
+
+local example_toggle = Linear_Section:AddToggle({
+    name = "Example Toggle",
+    default = true,
+    callback = function(state)
+        print(state)
+    end
+})
+
+local example_slider = Linear_Section:AddSlider({
+    name = "Example Slider",
+    min = 0,
+    max = 100,
+    default = 50,
+    callback = function(value)
+        print(value)
+    end
+})
+
+local example_dropdown2 = Linear_Section:AddDropdown({
+    name = "Example Dropdown",
+    list = {"Head", "Chest", "Body", "Legs"},
+    default = 3,
+    callback = function(active)
+        print(active)
+    end
+})
+
+local Redirect_Section = Aimbot_Tab:AddSection({
+    name = "Redirection",
+    side = "Right",
+})
+
+-- Visuals
+local example_tab2 = main:AddTab({
+    name = "Visuals"
+})
+
+local Visuals_Section = example_tab2:AddSection({
+	name = "Visuals",
+	side = "Left"
+})
+
+-- Misc
+local example_tab3 = main:AddTab({
+    name  ="Misc"
+})
+
+local example_tab4 = main:AddTab({
+    name  ="Config"
+})
