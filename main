@@ -32,7 +32,7 @@ function Library:tween(object, goal, callback)
 end
 
 -- Main Library Start
-function Library:AddWindow(options)
+function AddWindow(options)
     local options = options or {}
 	options = Library:validate({
 		name = "example"
@@ -1016,12 +1016,6 @@ function Library:AddWindow(options)
 
         return tab
     end -- AddTab
-
-
-
-    -----------------------------
-        ---- Watermark  -----
-    -----------------------------
 
     -- Destroy menu
 	UIS.InputBegan:Connect(function(input)
