@@ -1,4 +1,6 @@
-local main = Library:AddWindow({
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Neural0/seizedmenu/main/main",true))()
+
+local main = AddWindow({
     name = "seized.one"
 })
 
